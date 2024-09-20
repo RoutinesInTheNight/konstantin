@@ -138,6 +138,7 @@
     <!-- Видеофон -->
     <video class="background-video" autoplay muted loop>
         <source src="video.mp4" type="video/mp4">
+        <source src="video.webm" type="video/webm">
         Ваш браузер не поддерживает тег <code>video</code>.
     </video>
 
@@ -147,7 +148,7 @@
     <!-- Контейнер для основного контента -->
     <div class="content-wrapper">
         <a class="block" href="folder1/index.html">
-            <p class="name">Яна Свиридова</p>
+            <p class="name">ЯЯна Свиридова</p>
             <p class="date">🗓 12-17 сентября 2024</p>
         </a>
         <div class="block soon">Новая девочка скоро...</div>
@@ -187,11 +188,11 @@
 
                 if (rect.top < fadeZoneTop) {
                     const distanceFromTop = Math.min(1, (fadeZoneTop - rect.top) / fadeZoneTop);
-                    const opacityFactor = 0.8 - distanceFromTop;
+                    const opacityFactor = 1 - distanceFromTop;
                     block.style.opacity = `${opacityFactor}`;
                 } else if (rect.bottom > windowHeight - fadeZoneBottom) {
                     const distanceFromBottom = Math.min(1, (rect.bottom - (windowHeight - fadeZoneBottom)) / fadeZoneBottom);
-                    const opacityFactor = 0.8 - distanceFromBottom;
+                    const opacityFactor = 1 - distanceFromBottom;
                     block.style.opacity = `${opacityFactor}`;
                 } else {
                     block.style.opacity = '1';
