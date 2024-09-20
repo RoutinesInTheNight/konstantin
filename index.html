@@ -56,16 +56,22 @@
         }
 
         .block {
-            width: 80%;
-            height: 15vw;
-            border-radius: 25px;
-            margin: 20px 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 5vw;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
             text-align: center;
             cursor: pointer;
+
+            background: linear-gradient(270deg, #461747, #1f3b63, #16462d, #4c1818);
+            background-size: 800% 800%;
+
+            -webkit-animation: AnimationName 29s ease infinite;
+            -moz-animation: AnimationName 29s ease infinite;
+            animation: AnimationName 29s ease infinite;
         }
 
         .soon {
@@ -77,12 +83,14 @@
             color: white;
             font-size: 5vw;
             margin: 0;
+            opacity: 75%;
         }
 
         .date {
             color: #d7d7d7;
-            font-size: 4vw;
+            font-size: 3vw;
             margin: 0;
+            opacity: 50%;
         }
 
         a {
@@ -93,28 +101,6 @@
             color: #ffffff;
         }
 
-        .block:hover {
-            background-color: #62606A;
-        }
-
-
-        
-        .block {
-            background: linear-gradient(270deg, #6a236b, #294f83, #206742, #782626);
-            background-size: 800% 800%;
-
-            -webkit-animation: AnimationName 29s ease infinite;
-            -moz-animation: AnimationName 29s ease infinite;
-            animation: AnimationName 29s ease infinite;
-        }
-        p {
-            background: linear-gradient(270deg, #6a236b, #294f83, #206742, #782626);
-            background-size: 800% 800%;
-
-            -webkit-animation: AnimationName 29s ease infinite;
-            -moz-animation: AnimationName 29s ease infinite;
-            animation: AnimationName 29s ease infinite;
-        }
 
         @-webkit-keyframes AnimationName {
             0%{background-position:0% 50%}
@@ -131,6 +117,56 @@
             50%{background-position:100% 50%}
             100%{background-position:0% 50%}
         }
+
+
+
+
+
+
+
+        
+        #box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80%;
+            height: 15vw;
+        }
+        .gradient-border {
+            --borderWidth: .25vw;
+            position: relative;
+            border-radius: 5vw;
+            margin: 2.5vw 0;
+        }
+        .gradient-border:after {
+            content: '';
+            position: absolute;
+            top: calc(-1 * var(--borderWidth));
+            left: calc(-1 * var(--borderWidth));
+            height: calc(100% + var(--borderWidth) * 2);
+            width: calc(100% + var(--borderWidth) * 2);
+            /* background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82); */
+            background: linear-gradient(90deg, #ffffff, #000000, #ffffff);
+            border-radius: 5.2vw;
+            z-index: -1;
+            animation: animatedgradient 10s ease alternate infinite;
+            background-size: 300% 300%;
+        }
+        @keyframes animatedgradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+
+
+
     </style>
 </head>
 <body>
@@ -144,25 +180,46 @@
     <!-- Заголовок -->
     <img src="title.png" alt="Заголовок" class="header-image">
 
+
     <!-- Контейнер для основного контента -->
     <div class="content-wrapper">
-        <a class="block" href="folder1/index.html">
-            <p class="name">ЯЯна Свиридова</p>
-            <p class="date">🗓 12-17 сентября 2024</p>
-        </a>
-        <div class="block soon">Новая девочка скоро...</div>
-        <div class="block soon">Новая девочка скоро...</div>
-        <div class="block soon">Новая девочка скоро...</div>
-        <div class="block soon">Новая девочка скоро...</div>
-        <div class="block soon">Новая девочка скоро...</div>
-        <div class="block soon">Новая девочка скоро...</div>
-        <div class="block soon">Новая девочка скоро...</div>
-        <div class="block soon">Новая девочка скоро...</div>
-        <div class="block soon">Новая девочка скоро...</div>
-        <div class="block soon">Новая девочка скоро...</div>
-        <div class="block soon">Новая девочка скоро...</div>
-        <div class="block soon">Новая девочка скоро...</div>
-        <div class="block soon">Новая девочка скоро...</div>
+
+        
+
+        <div class="gradient-border" id="box">
+            <a class="block" href="folder1/index.html">
+                <p class="name">Яна Свиридова</p>
+                <p class="date">🗓 12-17 СЕНТЯБРЯ 2024</p>
+            </a>
+        </div>
+
+        <div class="gradient-border" id="box">
+            <p class="block soon">Новая девочка скоро...</p>
+        </div>
+
+        <div class="gradient-border" id="box">
+            <p class="block soon">Новая девочка скоро...</p>
+        </div>
+        <div class="gradient-border" id="box">
+            <p class="block soon">Новая девочка скоро...</p>
+        </div>
+        <div class="gradient-border" id="box">
+            <p class="block soon">Новая девочка скоро...</p>
+        </div>
+        <div class="gradient-border" id="box">
+            <p class="block soon">Новая девочка скоро...</p>
+        </div>
+        <div class="gradient-border" id="box">
+            <p class="block soon">Новая девочка скоро...</p>
+        </div>
+        <div class="gradient-border" id="box">
+            <p class="block soon">Новая девочка скоро...</p>
+        </div>
+        <div class="gradient-border" id="box">
+            <p class="block soon">Новая девочка скоро...</p>
+        </div>
+
+
     </div>
 
 
@@ -174,30 +231,33 @@
     
     <script>
         function updateBlockVisibility() {
-            const blocks = document.querySelectorAll('.block');
+            const gradientBorder = document.querySelectorAll('.gradient-border');
             const windowHeight = window.innerHeight;
             const fadeZoneTop = windowHeight * 0.35;
             const fadeZoneBottom = windowHeight * 0.25;
             const centerZone = windowHeight / 2;
 
-            blocks.forEach(block => {
-                const rect = block.getBoundingClientRect();
+            gradientBorder.forEach(gradientBorder => {
+                const rect = gradientBorder.getBoundingClientRect();
                 const distanceFromCenter = Math.abs(rect.top + rect.height / 2 - windowHeight / 2);
                 const scaleFactor = 1 - Math.min(0.1, distanceFromCenter / centerZone * 0.1);
 
                 if (rect.top < fadeZoneTop) {
                     const distanceFromTop = Math.min(1, (fadeZoneTop - rect.top) / fadeZoneTop);
+
+
+
                     const opacityFactor = 1 - distanceFromTop;
-                    block.style.opacity = `${opacityFactor}`;
+                    gradientBorder.style.opacity = `${opacityFactor}`;
                 } else if (rect.bottom > windowHeight - fadeZoneBottom) {
                     const distanceFromBottom = Math.min(1, (rect.bottom - (windowHeight - fadeZoneBottom)) / fadeZoneBottom);
                     const opacityFactor = 1 - distanceFromBottom;
-                    block.style.opacity = `${opacityFactor}`;
+                    gradientBorder.style.opacity = `${opacityFactor}`;
                 } else {
-                    block.style.opacity = '1';
+                    gradientBorder.style.opacity = '1';
                 }
 
-                block.style.transform = `scale(${scaleFactor})`;
+                gradientBorder.style.transform = `scale(${scaleFactor})`;
             });
         }
 
