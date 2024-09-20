@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Блоки со ссылками с видеофоном</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Переписки Костика</title>
     <style>
 
         @font-face {
@@ -47,7 +48,7 @@
 
         /* Контентный блок */
         .content-wrapper {
-            margin-top: 75vw;
+            margin-top: 60vw;
             z-index: 2;
             width: 100%;
             display: flex;
@@ -69,9 +70,9 @@
             background: linear-gradient(270deg, #461747, #1f3b63, #16462d, #4c1818);
             background-size: 800% 800%;
 
-            -webkit-animation: AnimationName 29s ease infinite;
-            -moz-animation: AnimationName 29s ease infinite;
-            animation: AnimationName 29s ease infinite;
+            -webkit-animation: AnimationName 30s ease infinite;
+            -moz-animation: AnimationName 30s ease infinite;
+            animation: AnimationName 30s ease infinite;
         }
 
         .soon {
@@ -83,15 +84,27 @@
             color: white;
             font-size: 5vw;
             margin: 0;
-            opacity: 75%;
+            opacity: 80%;
         }
 
-        .date {
+        .chat-info {
             color: #d7d7d7;
-            font-size: 3vw;
+            font-size: 3.5vw;
             margin: 0;
-            opacity: 50%;
+            opacity: 60%;
         }
+        .fa-solid,
+        .fa-regular {
+            position: absolute;
+            right: 2vw;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 5vw;
+            color: #d7d7d7;
+            opacity: 60%;
+            pointer-events: none; /* Чтобы клики на иконку не мешали клику по ссылке */
+        }
+
 
         a {
             text-decoration: none;
@@ -130,7 +143,7 @@
             align-items: center;
             justify-content: center;
             width: 80%;
-            height: 15vw;
+            height: 17.5vw;
         }
         .gradient-border {
             --borderWidth: .25vw;
@@ -163,61 +176,107 @@
                 background-position: 0% 50%;
             }
         }
-
-
-
-
     </style>
 </head>
 <body>
 
-    <!-- Видеофон -->
+
     <video class="background-video" autoplay muted loop playsinline>
         <source src="video.mp4" type="video/mp4">
         Ваш браузер не поддерживает тег <code>video</code>.
     </video>
 
-    <!-- Заголовок -->
+
     <img src="title.png" alt="Заголовок" class="header-image">
 
 
-    <!-- Контейнер для основного контента -->
     <div class="content-wrapper">
-
         
 
+        
         <div class="gradient-border" id="box">
-            <a class="block" href="folder1/index.html">
+            <a class="block" href="chat_1/index.html">
                 <p class="name">Яна Свиридова</p>
-                <p class="date">🗓 12-17 СЕНТЯБРЯ 2024</p>
+                <p class="chat-info">💬 587 СООБЩЕНИЙ</p>
+                <p class="chat-info">🗓 12-20 СЕНТЯБРЯ 2024</p>
             </a>
+            <i class="fa-solid fa-bars-staggered"></i>
+        </div>
+        
+        <div class="gradient-border" id="box">
+            <a class="block" href="chat_2/index.html">
+                <p class="name">Ксюша🧚‍♂️ </p>
+                <p class="chat-info">💬 70 СООБЩЕНИЙ</p>
+                <p class="chat-info">🗓 18 СЕНТЯБРЯ 2024</p>
+            </a>
+            <i class="fa-solid fa-bars-staggered"></i>
         </div>
 
         <div class="gradient-border" id="box">
-            <p class="block soon">Новая девочка скоро...</p>
+            <p class="block chat-info">Новая девочка скоро...</p>
+            <i class="fa-regular fa-clock"></i>
         </div>
 
         <div class="gradient-border" id="box">
-            <p class="block soon">Новая девочка скоро...</p>
+            <p class="block chat-info">Новая девочка скоро...</p>
+            <i class="fa-regular fa-clock"></i>
         </div>
+
         <div class="gradient-border" id="box">
-            <p class="block soon">Новая девочка скоро...</p>
+            <p class="block chat-info">Новая девочка скоро...</p>
+            <i class="fa-regular fa-clock"></i>
         </div>
+
         <div class="gradient-border" id="box">
-            <p class="block soon">Новая девочка скоро...</p>
+            <p class="block chat-info">Новая девочка скоро...</p>
+            <i class="fa-regular fa-clock"></i>
         </div>
+
         <div class="gradient-border" id="box">
-            <p class="block soon">Новая девочка скоро...</p>
+            <p class="block chat-info">Новая девочка скоро...</p>
+            <i class="fa-regular fa-clock"></i>
         </div>
+        
         <div class="gradient-border" id="box">
-            <p class="block soon">Новая девочка скоро...</p>
+            <p class="block chat-info">Новая девочка скоро...</p>
+            <i class="fa-regular fa-clock"></i>
         </div>
+                
         <div class="gradient-border" id="box">
-            <p class="block soon">Новая девочка скоро...</p>
+            <p class="block chat-info">Новая девочка скоро...</p>
+            <i class="fa-regular fa-clock"></i>
         </div>
+                
         <div class="gradient-border" id="box">
-            <p class="block soon">Новая девочка скоро...</p>
+            <p class="block chat-info">Новая девочка скоро...</p>
+            <i class="fa-regular fa-clock"></i>
         </div>
+                
+        <div class="gradient-border" id="box">
+            <p class="block chat-info">Новая девочка скоро...</p>
+            <i class="fa-regular fa-clock"></i>
+        </div>
+                
+        <div class="gradient-border" id="box">
+            <p class="block chat-info">Новая девочка скоро...</p>
+            <i class="fa-regular fa-clock"></i>
+        </div>
+                
+        <div class="gradient-border" id="box">
+            <p class="block chat-info">Новая девочка скоро...</p>
+            <i class="fa-regular fa-clock"></i>
+        </div>
+                
+        <div class="gradient-border" id="box">
+            <p class="block chat-info">Новая девочка скоро...</p>
+            <i class="fa-regular fa-clock"></i>
+        </div>
+                
+        <div class="gradient-border" id="box">
+            <p class="block chat-info">Новая девочка скоро...</p>
+            <i class="fa-regular fa-clock"></i>
+        </div>
+
 
 
     </div>
@@ -234,7 +293,7 @@
             const gradientBorder = document.querySelectorAll('.gradient-border');
             const windowHeight = window.innerHeight;
             const fadeZoneTop = windowHeight * 0.35;
-            const fadeZoneBottom = windowHeight * 0.25;
+            const fadeZoneBottom = windowHeight * 0.35;
             const centerZone = windowHeight / 2;
 
             gradientBorder.forEach(gradientBorder => {
@@ -244,14 +303,11 @@
 
                 if (rect.top < fadeZoneTop) {
                     const distanceFromTop = Math.min(1, (fadeZoneTop - rect.top) / fadeZoneTop);
-
-
-
-                    const opacityFactor = 1 - distanceFromTop;
+                    const opacityFactor = (1 - distanceFromTop) / 0.35 - 1;
                     gradientBorder.style.opacity = `${opacityFactor}`;
                 } else if (rect.bottom > windowHeight - fadeZoneBottom) {
                     const distanceFromBottom = Math.min(1, (rect.bottom - (windowHeight - fadeZoneBottom)) / fadeZoneBottom);
-                    const opacityFactor = 1 - distanceFromBottom;
+                    const opacityFactor = 1.075 - distanceFromBottom;
                     gradientBorder.style.opacity = `${opacityFactor}`;
                 } else {
                     gradientBorder.style.opacity = '1';
