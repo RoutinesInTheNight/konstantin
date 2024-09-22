@@ -1,0 +1,192 @@
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('SFProDisplay-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "SF Pro Display", Arial, sans-serif;
+    font-weight: lighter;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.message.girl .message-tail {
+    fill: #ff9900; /* Цвет хвостика для сообщений "girl" */
+}
+
+
+.header {
+    position: sticky;
+    top: 0;
+    height: 10.28vw;
+    background-color: #1C1C1C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.header .name {
+    font-size: 4.25vw;
+    color: white;
+    font-weight: bold;
+}
+.header .status {
+    font-size: 3.225vw;
+    color: #aaa;
+}
+.header .avatar {
+    position: absolute;
+    right: 1.3vw;
+    /* top: 50%; */
+    width: 8.8vw;
+    height: 8.8vw;
+    border-radius: 50%;
+}
+.header .fa-solid {
+    position: absolute;
+    left: 1.7vw;
+    font-size: 5.5vw;
+    color: #d7d7d7;
+}
+
+
+.message-tail {
+    /* background-color: wheat; */
+}
+
+
+.chat-container {
+    padding: 2.336vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.date-banner {
+    text-align: center;
+    margin: 2.5vw auto;
+    padding: .5vw 2vw;
+    background-color: #333;
+    color: #fff;
+    font-size: 3.25vw;
+    border-radius: 3.5vw;
+    width: fit-content;
+}
+
+.message {
+    position: relative;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 15px;
+    max-width: 70%;
+    word-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.message-time {
+    font-size: 12px;
+    color: #aaa;
+    margin-left: 10px;
+    margin-right: 5px;
+    margin-top: auto;
+    align-self: flex-end;
+}
+
+.girl {
+    background-color: #3E4049;
+    align-self: flex-start;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.kostik {
+    background-color: #44475a;
+    align-self: flex-end;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.message-image {
+    max-width: 220px;
+    width: 100%; /* Фото по размеру сообщения */
+    border-radius: 10px 10px 0 0;
+    display: block;
+}
+
+.message-image-rounded {
+    max-width: 220px;
+    width: 100%; /* Фото по размеру сообщения */
+    border-radius: 10px;
+    display: block;
+}
+
+.caption {
+    font-size: 16px;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: #3E4049; /* Серый фон только под подписью */
+    border-radius: 0 0 10px 10px;
+    width: 100%; /* Подпись под фото */
+}
+
+.message-tail {
+    position: absolute;
+    bottom: 0;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    fill: inherit;
+}
+
+.kostik .message-tail {
+    left: auto;
+    right: -10px;
+}
+
+.with-tail {
+    padding-bottom: 10px;
+}
+
+.photo-only {
+    background: none; /* Убрана серая область у фото без подписи */
+    position: relative;
+}
+
+.photo-only .message-image-rounded {
+    border-radius: 10px;
+}
+
+.photo-only .message-time {
+    position: absolute;
+    bottom: -5px; /* Время выходит за рамки фото */
+    right: -10px; /* Время расположено справа внизу */
+    font-size: 12px;
+    color: #aaa;
+}
+
+/* Центрирование текста по вертикали */
+.message {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 40px;
+}
+
+.message .message-time {
+    align-self: flex-end;
+}

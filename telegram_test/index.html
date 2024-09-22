@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Чат</title>
+       <link rel="stylesheet" href="style.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+
+<body>
+
+       <div class="header">
+              <i class="fa-solid fa-chevron-left"></i>
+              <div class="header-content">
+                     <span class="name">Оля</span>
+                     <span class="status">в сети</span>
+              </div>
+              <img src="avatar.jpg" alt="Аватар собеседника" class="avatar">
+       </div>
+
+
+       <div class="chat-container">
+
+              <div class="date-banner">21 сентября</div>
+
+
+
+              <!-- Сообщение собеседника с отростком -->
+              <div class="message girl with-tail">
+                     Привет! Как дела?
+                     <span class="message-time">12:34</span>
+                     <svg class="message-tail" viewBox="0 0 11 20"><use href="#message-tail-filled"></use></svg>
+              </div>
+
+
+              <!-- Мое сообщение без отростка -->
+              <div class="message kostik">
+                     Привет, всё хорошо, а у тебя?
+                     <span class="message-time">12:35</span>
+              </div>
+
+              <!-- Сообщение собеседника с фото и подписью под фото -->
+              <div class="message girl photo-with-caption">
+                     <img src="IMG_7449.jpg" alt="Фото" class="message-image">
+                     <div class="caption">Это фото с моей поездки</div>
+                     <span class="message-time">12:36</span>
+              </div>
+
+              <!-- Мое фото с подписью под фото -->
+              <div class="message kostik with-tail photo-with-caption">
+                     <img src="IMG_7450.jpg" alt="Фото" class="message-image">
+                     <div class="caption">И это тоже</div>
+                     <span class="message-time">12:37</span>
+                     <svg class="message-tail" viewBox="0 0 11 20">
+                            <use href="#message-tail-filled"></use>
+                     </svg>
+              </div>
+
+              <!-- Сообщение с фото без подписи -->
+              <div class="message kostik photo-only">
+                     <img src="IMG_7450.jpg" alt="Фото" class="message-image-rounded">
+                     <span class="message-time">12:38</span>
+              </div>
+       </div>
+
+
+
+       <!-- Вставка SVG для отростков сообщений -->
+       <svg style="display: none;">
+              <symbol id="message-tail-filled" viewBox="0 0 11 20">
+                     <g transform="translate(9 -14)" fill="inherit" fill-rule="evenodd">
+                            <path d="M-6 16h6v17c-.193-2.84-.876-5.767-2.05-8.782-.904-2.325-2.446-4.485-4.625-6.48A1 1 0 01-6 16z"
+                                   transform="matrix(1 0 0 -1 0 49)" fill="inherit"></path>
+                     </g>
+              </symbol>
+       </svg>
+
+       
+</body>
+
+</html>
