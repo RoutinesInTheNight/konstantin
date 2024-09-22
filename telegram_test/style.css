@@ -22,12 +22,15 @@ body {
     fill: #ff9900; /* Цвет хвостика для сообщений "girl" */
 }
 
-
 .header {
     position: sticky;
     top: 0;
-    height: 10.28vw;
+    padding-top: 1.5vw;
     background-color: #1C1C1C;
+    z-index: 1000;
+}
+.header-container {
+    height: 12vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,7 +47,7 @@ body {
 }
 .header .status {
     font-size: 3.225vw;
-    color: #aaa;
+    color: #8E8E8E;
 }
 .header .avatar {
     position: absolute;
@@ -54,11 +57,19 @@ body {
     height: 8.8vw;
     border-radius: 50%;
 }
-.header .fa-solid {
+.header a {
     position: absolute;
-    left: 1.7vw;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 25%;
+    left: 0;
+    text-decoration: none;
+}
+.header .fa-solid {
+    margin-left: 1.7vw;
     font-size: 5.5vw;
-    color: #d7d7d7;
+    color: #8E8E8E;
 }
 
 
