@@ -82,6 +82,7 @@
             height: calc(100% + var(--borderWidth) * 2);
             width: calc(100% + var(--borderWidth) * 2);
             background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+            background: linear-gradient(45deg, #dd7b55, #d78f57);
             /* background: linear-gradient(90deg, #ffffff, #000000, #ffffff); */
             border-radius: 5.2vw;
             z-index: -1;
@@ -105,11 +106,10 @@
             background-color: rgba(50, 50, 50, 0.9);
         }
         .menu-block-href {
-            color: white;
+            width: 20%;
             text-decoration: none;
         }
         .menu-block {
-            width: 17.5vw;
             justify-content: center;
             align-items: center;
             flex-direction: column;
@@ -148,13 +148,14 @@
                 #0190cd 70%,
                 #764ada 80%
             ); */
-            background: linear-gradient(
+            /* background: linear-gradient(
                 to right,
-                #ffffff 20%,
+                #f2e0f2 20%,
                 #b6e3e3 30%,
                 #ececec 70%,
                 #dac1db 80%
-            );
+            ); */
+            background: linear-gradient(45deg, #f1bd9e, #f3cfb1, #f7e1cc, #fae7e4, #fcf4f1);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -162,26 +163,25 @@
             animation: textShine 10s ease-in-out infinite alternate;
         }
         .menu-block-href .chosen {
-            background: linear-gradient(
-                to right,
-                #aa93dc 20%,
-                #d87ed0 30%,
-                #e69ac6 70%,
-                #a99cc5 80%
-            );
-            /* background: linear-gradient(
-                to right,
-                #ffffff 20%,
-                #959595 30%,
-                #ececec 70%,
-                #757575 80%
-            ); */
+            background: linear-gradient(315deg, #ee9617 0%, #fe5858 74%);
+            background: linear-gradient(45deg, #D6A65F, #C78E53, #B87647, #A95F3B, #9A482F);
+            background: linear-gradient(45deg, #c0540b, #fe8802, #f5daaf);
+            background: linear-gradient(45deg, #bf7e3d, #a26121, #804912);
+            background: linear-gradient(45deg, #f59167, #a6663c);
+            background: linear-gradient(45deg, #a60f0f, #c4611a);
+            background: linear-gradient(45deg, #E26317, #9E4909);
+            background: linear-gradient(45deg, #dd7b55, #d78f57);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
             background-size: 500% auto;
-            animation: textShine 10s ease-in-out infinite alternate;
+            animation: animatedgradient 10s ease alternate infinite;
         }
+
+
+
+
+
 
 
 
@@ -417,7 +417,7 @@
                 </div>
             </a> -->
 
-            <a class="menu-block-href" href="chat_1/index.html">
+            <a class="menu-block-href" href="">
                 <div class="menu-block">
                     <i class="fa-brands fa-telegram bottom-menu-icon"></i>
                     <p class="menu-name">Стикеры</p>
