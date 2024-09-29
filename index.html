@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
     <title>Переписки Костика</title>
     <style>
         @font-face {
@@ -562,6 +564,17 @@
 
 
     <script>
+
+        const element = document.querySelector('.menu-block-href');
+
+        element.addEventListener('click', function() {
+            if (window.Telegram.WebApp) {
+                Telegram.WebApp.HapticFeedback.impactOccurred('medium');
+            }
+        });
+
+
+
         function updateBlockVisibility() {
             const gradientBorder = document.querySelectorAll('.gradient-border');
 
