@@ -579,9 +579,17 @@
             link.addEventListener('click', function(e) {
                 e.preventDefault();
                 const targetUrl = this.getAttribute('href');
+
+                // Добавляем вибрацию через Telegram API
+                if (window.Telegram?.WebApp?.HapticFeedback) {
+                    window.Telegram.WebApp.HapticFeedback.impactOccurred('soft'); // Сила вибрации может быть light, medium или heavy
+                }
+
+                // Редирект с задержкой, если требуется
                 addVibrationAndRedirect(this, targetUrl);
             });
         });
+
 
 
 
