@@ -564,16 +564,17 @@
 
 
     <script>
+        
+        const tg = window.Telegram.WebApp;
+        
+        tg.setHeaderColor('#ffffff');
+        tg.isExpanded;
+        tg.expand();
+        tg.enableClosingConfirmation()
+        tg.disableVerticalSwipes()
 
+        tg.ready();
 
-        window.Telegram.WebApp.expand();
-        window.Telegram.WebApp.setHeaderColor('#ffffff');
-        if (window.Telegram?.WebApp?.isClosingConfirmationEnabled) {
-            window.Telegram.WebApp.isClosingConfirmationEnabled(true);
-        }
-        if (window.Telegram?.WebApp?.isVerticalSwipesEnabled) {
-            window.Telegram.WebApp.isVerticalSwipesEnabled(false);
-        }
 
 
 
