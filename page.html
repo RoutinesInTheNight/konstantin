@@ -414,7 +414,7 @@
                 </div>
             </a>
 
-            <a class="menu-block-href" href="page.html">
+            <a class="menu-block-href" href="chat_1/index.html">
                 <div class="menu-block">
                     <i class="fa-solid fa-music bottom-menu-icon"></i>
                     <p class="menu-name">Песни</p>
@@ -567,11 +567,10 @@
 
 
         window.Telegram.WebApp.expand();
-        window.Telegram.WebApp.setHeaderColor('#ffffff');
-        if (window.Telegram?.WebApp?.setupClosingConfirmation) {
-            window.Telegram.WebApp.setupClosingConfirmation(true);
-        }
+        window.Telegram.WebApp.setHeaderColor('#ffffff'); // Изменение цвета заголовка на кастомный оранжевый
 
+
+        window.Telegram.WebApp.setupClosingConfirmation(true);
 
 
 
@@ -583,7 +582,7 @@
 
                 // Добавляем вибрацию через Telegram API
                 if (window.Telegram?.WebApp?.HapticFeedback) {
-                    window.Telegram.WebApp.HapticFeedback.impactOccurred('soft'); // Сила вибрации может быть light, medium или heavy
+                    window.Telegram.WebApp.HapticFeedback.impactOccurred('light'); // Сила вибрации может быть light, medium или heavy
                 }
 
                 // Редирект с задержкой, если требуется
