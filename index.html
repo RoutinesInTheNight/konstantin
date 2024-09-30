@@ -568,8 +568,11 @@
 
         window.Telegram.WebApp.expand();
         window.Telegram.WebApp.setHeaderColor('#ffffff');
-        if (window.Telegram?.WebApp?.setupClosingConfirmation) {
-            window.Telegram.WebApp.setupClosingConfirmation(true);
+        if (window.Telegram?.WebApp?.isClosingConfirmationEnabled) {
+            window.Telegram.WebApp.isClosingConfirmationEnabled(true);
+        }
+        if (window.Telegram?.WebApp?.isVerticalSwipesEnabled) {
+            window.Telegram.WebApp.isVerticalSwipesEnabled(false);
         }
 
 
@@ -581,13 +584,16 @@
                 e.preventDefault();
                 const targetUrl = this.getAttribute('href');
 
-                // Добавляем вибрацию через Telegram API
                 if (window.Telegram?.WebApp?.HapticFeedback) {
-                    window.Telegram.WebApp.HapticFeedback.impactOccurred('soft'); // Сила вибрации может быть light, medium или heavy
+                    window.Telegram.WebApp.HapticFeedback.impactOccurred('soft');
                 }
 
+                setTimeout(() => {
+                    window.location.href = url;
+                }, 100);
+
                 // Редирект с задержкой, если требуется
-                addVibrationAndRedirect(this, targetUrl);
+                // addVibrationAndRedirect(this, targetUrl);
             });
         });
 
