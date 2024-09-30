@@ -582,7 +582,7 @@
 
                 // Добавляем вибрацию через Telegram API
                 if (window.Telegram?.WebApp?.HapticFeedback) {
-                    window.Telegram.WebApp.HapticFeedback.impactOccurred('soft'); // Сила вибрации может быть light, medium или heavy
+                    window.Telegram.WebApp.HapticFeedback.impactOccurred('light'); // Сила вибрации может быть light, medium или heavy
                 }
 
                 // Редирект с задержкой, если требуется
