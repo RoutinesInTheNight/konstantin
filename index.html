@@ -19,7 +19,7 @@
             padding: 0;
             min-height: 200vh;
             display: flex;
-            background-color: #1F1F1F;
+            background-color: black;
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
@@ -565,13 +565,24 @@
 
     <script>
 
-        const element = document.querySelector('.menu-block-href');
 
-        element.addEventListener('click', function() {
-            if (window.Telegram.WebApp) {
-                Telegram.WebApp.HapticFeedback.impactOccurred('medium');
-            }
+    window.Telegram.WebApp.expand();
+    window.Telegram.WebApp.setHeaderColor('#ffffff'); // Изменение цвета заголовка на кастомный оранжевый
+
+
+        window.Telegram.WebApp.setupClosingConfirmation(true);
+
+
+
+
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetUrl = this.getAttribute('href');
+                addVibrationAndRedirect(this, targetUrl);
+            });
         });
+
 
 
 
